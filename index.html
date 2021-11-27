@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Bake Story</title>
+    <script type="text/javascript" src="particles.js-master/particles.js-master/particles.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <style>
       body{
@@ -17,6 +18,14 @@
         border-top-left-radius: 30px;
         border-top-right-radius: 30px;
       }
+      #particles-js {
+        background: linear-gradient(to right, #6a3093, #a044ff);
+        position: relative;
+        height: 100vh;
+      }
+      #particle-js canvas,#container{
+        position: absolute;
+      }
       /* @media only screen and (max-width:600px){
         .gallery-topper p{
           font-size: 100px;
@@ -28,7 +37,7 @@
 <body>
     
 
-      <nav class="navbar navbar-expand-lg navbar-light bg-light" style="margin: 5px; padding: 10px; border-radius: 10px; background: linear-gradient(to right, #6a3093, #a044ff);">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light" style="margin: 10px; padding: 10px; border-radius: 10px; background: linear-gradient(to right, #6a3093, #a044ff);">
         <div class="container-fluid" style=" background: linear-gradient(to right, #6a3093, #a044ff);border-radius: 10px;">
             <a class="navbar-brand" href="#">
                 <img src="Images/logo.png" alt="" loading="lazy" width="100" height="100" class="d-inline-block align-text-top" style="vertical-align: middle; border-radius: 10px;">
@@ -54,65 +63,69 @@
           </div>
         </div>
       </nav><br>
-      <div class="col col-md-6 mx-auto" style="padding: 10px;background: linear-gradient(to right, #eacda3, #d6ae7b);border-radius: 10px;">
-        <div id="carouselExampleCaptions" class="carousel slide w-100" data-bs-ride="carousel" style="margin:auto;">
-          <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4" aria-label="Slide 5"></button>
+      <div id="particles-js" style="padding: 10px;border-radius: 10px;margin: 10px;">
+        <canvas class="particles-js-canvas-el" style="width: 100%; height: 100%;"></canvas>
+        <div class="col col-md-6 mx-auto" id="container" style="background: linear-gradient(to right, #eacda3, #d6ae7b);">
+          <div id="carouselExampleCaptions" class="carousel slide w-100 mx-auto" data-bs-ride="carousel" style="margin:auto;padding: 10px;">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4" aria-label="Slide 5"></button>
+            </div>
+            <div class="carousel-inner" style="border-radius: 10px;">
+              <div class="carousel-item active">
+                <img src="Images/Rasmalai epic main_compress55.jpg" loading="lazy" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5 style="color: black; font-family: 'Trebuchet MS';">Rasmalai Flavoured</h5>
+                  <p>Some representative placeholder content for the first slide.</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="Images/Red n white epic.jpg" loading="lazy" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5 style="color: black; font-family: 'Trebuchet MS';">Classy Cornetto</h5>
+                  <p>Some representative placeholder content for the second slide.</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="Images/Cornette yellow epic.jpg" loading="lazy" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5 style="color: black; font-family: 'Trebuchet MS';">Red Velvet</h5>
+                  <p>Some representative placeholder content for the third slide.</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="Images/Couple's cake.jpg" loading="lazy" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5 style="color: black; font-family: 'Trebuchet MS';">Red Velvet</h5>
+                  <p>Some representative placeholder content for the third slide.</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="Images/Engagement .jpg" loading="lazy" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5 style="color: black; font-family: 'Trebuchet MS';">Red Velvet</h5>
+                  <p>Some representative placeholder content for the third slide.</p>
+                </div>
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
           </div>
-          <div class="carousel-inner" style="border-radius: 10px;">
-            <div class="carousel-item active">
-              <img src="Images/Rasmalai epic main_compress55.jpg" loading="lazy" class="d-block w-100" alt="...">
-              <div class="carousel-caption d-none d-md-block">
-                <h5 style="color: black; font-family: 'Trebuchet MS';">Rasmalai Flavoured</h5>
-                <p>Some representative placeholder content for the first slide.</p>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <img src="Images/Red n white epic.jpg" loading="lazy" class="d-block w-100" alt="...">
-              <div class="carousel-caption d-none d-md-block">
-                <h5 style="color: black; font-family: 'Trebuchet MS';">Classy Cornetto</h5>
-                <p>Some representative placeholder content for the second slide.</p>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <img src="Images/Cornette yellow epic.jpg" loading="lazy" class="d-block w-100" alt="...">
-              <div class="carousel-caption d-none d-md-block">
-                <h5 style="color: black; font-family: 'Trebuchet MS';">Red Velvet</h5>
-                <p>Some representative placeholder content for the third slide.</p>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <img src="Images/Couple's cake.jpg" loading="lazy" class="d-block w-100" alt="...">
-              <div class="carousel-caption d-none d-md-block">
-                <h5 style="color: black; font-family: 'Trebuchet MS';">Red Velvet</h5>
-                <p>Some representative placeholder content for the third slide.</p>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <img src="Images/Engagement .jpg" loading="lazy" class="d-block w-100" alt="...">
-              <div class="carousel-caption d-none d-md-block">
-                <h5 style="color: black; font-family: 'Trebuchet MS';">Red Velvet</h5>
-                <p>Some representative placeholder content for the third slide.</p>
-              </div>
-            </div>
-          </div>
-          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-          </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-          </button>
         </div>
       </div>
       <br>
       <div class="gallery-topper" style="padding: 10px; margin: 0%; border-width: 10px;">
-        <p id="Gallery" style=" background: linear-gradient(to right, #6a3093, #a044ff);;border-radius: 10px; font-size: 50px; font-family:'Trebuchet MS'; color:whitesmoke">&nbspGallery</p>
+        <div style="background-color: lavender;">
+        <p id="Gallery" style=" background: linear-gradient(to right, #6a3093, #a044ff);border-radius: 10px; font-size: 50px; font-family:'Trebuchet MS'; color:whitesmoke">&nbspGallery</p>
       </div>
       <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4" style="padding: 10px; margin: 0%;">
         <div class="col">
@@ -411,7 +424,7 @@
         </div>
       </div>
       <br>
-      <div class="card mb-3" style="max-width: 540px;margin: auto;">
+      <div class="card mb-3" style="max-width: 540px;margin: auto;border-radius: 30px;">
         <div class="row g-0">
           <div class="col-md-4">
             <img src="Images/Barbie.jpg" loading="lazy" class="img-fluid rounded-start" alt="...">
@@ -430,6 +443,330 @@
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
       <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+      <script type="text/javascript">
+        particlesJS("particles-js",/*GrowingParticles*//*{
+  "background": {
+    "color": {
+      "value": "#0d47a1"
+    },
+    "position": "50% 50%",
+    "repeat": "no-repeat",
+    "size": "cover"
+  },
+  "fullScreen": {
+    "zIndex": 1
+  },
+  "interactivity": {
+    "events": {
+      "onClick": {
+        "mode": "push"
+      },
+      "onHover": {
+        "mode": "repulse"
+      }
+    },
+    "modes": {
+      "bubble": {
+        "distance": 400,
+        "duration": 2,
+        "opacity": 0.8,
+        "size": 40
+      },
+      "grab": {
+        "distance": 400
+      }
+    }
+  },
+  "particles": {
+    "color": {
+      "value": "#ffffff"
+    },
+    "links": {
+      "color": {
+        "value": "#ffffff"
+      },
+      "distance": 150,
+      "opacity": 0.4
+    },
+    "move": {
+      "attract": {
+        "rotate": {
+          "x": 600,
+          "y": 1200
+        }
+      },
+      "enable": true,
+      "outModes": {
+        "default": "destroy",
+        "bottom": "destroy",
+        "left": "destroy",
+        "right": "destroy",
+        "top": "destroy"
+      },
+      "speed": 5
+    },
+    "number": {
+      "density": {
+        "enable": true
+      },
+      "value": 0
+    },
+    "opacity": {
+      "animation": {
+        "speed": 3,
+        "minimumValue": 0.1
+      }
+    },
+    "size": {
+      "value": {
+        "min": 0.1,
+        "max": 20
+      },
+      "animation": {
+        "enable": true,
+        "sync": true,
+        "destroy": "max",
+        "startValue": "min",
+        "minimumValue": 0.1
+      }
+    }
+  },
+  "emitters": {
+    "autoPlay": true,
+    "fill": true,
+    "life": {
+      "wait": false
+    },
+    "rate": {
+      "quantity": 2,
+      "delay": 0.1
+    },
+    "shape": "square",
+    "startCount": 0,
+    "size": {
+      "mode": "percent",
+      "height": 0,
+      "width": 100
+    },
+    "direction": "top",
+    "position": {
+      "x": 50,
+      "y": 100
+    }
+  }
+}*//*Parallax*/{
+  "background": {
+    "color": {
+      "value": "#0d47a1"
+    },
+    "position": "50% 50%",
+    "repeat": "no-repeat",
+    "size": "cover"
+  },
+  "fullScreen": {
+    "zIndex": 1
+  },
+  "interactivity": {
+    "events": {
+      "onClick": {
+        "enable": true,
+        "mode": "push"
+      },
+      "onHover": {
+        "enable": true,
+        "mode": "grab",
+        "parallax": {
+          "enable": true,
+          "force": 60
+        }
+      }
+    },
+    "modes": {
+      "bubble": {
+        "distance": 400,
+        "duration": 2,
+        "opacity": 0.8,
+        "size": 40
+      },
+      "grab": {
+        "distance": 400
+      }
+    }
+  },
+  "particles": {
+    "color": {
+      "value": "#ffffff"
+    },
+    "links": {
+      "color": {
+        "value": "#ffffff"
+      },
+      "distance": 150,
+      "enable": true,
+      "opacity": 0.4
+    },
+    "move": {
+      "attract": {
+        "rotate": {
+          "x": 600,
+          "y": 1200
+        }
+      },
+      "enable": true,
+      "outModes": {
+        "bottom": "out",
+        "left": "out",
+        "right": "out",
+        "top": "out"
+      }
+    },
+    "number": {
+      "density": {
+        "enable": true
+      }
+    },
+    "opacity": {
+      "random": {
+        "enable": true
+      },
+      "value": {
+        "min": 0.1,
+        "max": 0.5
+      },
+      "animation": {
+        "enable": true,
+        "speed": 3,
+        "minimumValue": 0.1
+      }
+    },
+    "size": {
+      "random": {
+        "enable": true
+      },
+      "value": {
+        "min": 0.1,
+        "max": 10
+      },
+      "animation": {
+        "enable": true,
+        "speed": 20,
+        "minimumValue": 0.1
+      }
+    }
+  }
+}/*Default*//*{
+  "particles": {
+    "number": {
+      "value": 100,
+      "density": {
+        "enable": true,
+        "value_area": 1000
+      }
+    },
+    "color": {
+      "value": "#ffffff"
+    },
+    "shape": {
+      "type": "circle",
+      "stroke": {
+        "width": 0,
+        "color": "#000000"
+      },
+      "polygon": {
+        "nb_sides": 5
+      },
+      "image": {
+        "src": "img/github.svg",
+        "width": 100,
+        "height": 100
+      }
+    },
+    "opacity": {
+      "value": 0.5,
+      "random": false,
+      "anim": {
+        "enable": false,
+        "speed": 1,
+        "opacity_min": 0.1,
+        "sync": false
+      }
+    },
+    "size": {
+      "value": 3,
+      "random": true,
+      "anim": {
+        "enable": false,
+        "speed": 40,
+        "size_min": 0.1,
+        "sync": false
+      }
+    },
+    "line_linked": {
+      "enable": true,
+      "distance": 150,
+      "color": "#ffffff",
+      "opacity": 0.4,
+      "width": 1
+    },
+    "move": {
+      "enable": true,
+      "speed": 6,
+      "direction": "none",
+      "random": false,
+      "straight": false,
+      "out_mode": "out",
+      "bounce": false,
+      "attract": {
+        "enable": false,
+        "rotateX": 600,
+        "rotateY": 1200
+      }
+    }
+  },
+  "interactivity": {
+    "detect_on": "canvas",
+    "events": {
+      "onhover": {
+        "enable": true,
+        "mode": "repulse"
+      },
+      "onclick": {
+        "enable": true,
+        "mode": "push"
+      },
+      "resize": true
+    },
+    "modes": {
+      "grab": {
+        "distance": 400,
+        "line_linked": {
+          "opacity": 1
+        }
+      },
+      "bubble": {
+        "distance": 400,
+        "size": 40,
+        "duration": 2,
+        "opacity": 8,
+        "speed": 3
+      },
+      "repulse": {
+        "distance": 200,
+        "duration": 0.4
+      },
+      "push": {
+        "particles_nb": 4
+      },
+      "remove": {
+        "particles_nb": 2
+      }
+    }
+  },
+  "retina_detect": true
+}*/);
+     </script>
+    <script src="src/App.js"></script>
         
 </body>
 </html>
